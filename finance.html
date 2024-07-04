@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+    <link rel="stylesheet" href="finance.css">
+    <title>Finance Tracker</title>
+  </head>
+  <body>
+    <div id="finance-title"><h1>Finance Chart</h1></div>
+      <div id="root"></div>
+ <section id="income-section">
+        <div id="income-title"><h2>Income</h2></div>
+        <div id="income-field" class="container">
+          <div class="input-group-mb-3">
+            <div class="input-group-prepend">
+              <button id="income-btn" class="btn btn-outline-secondary">Income</button>
+              <input id="income-value" type="number" class="form-control" placeholder="Enter Income">
+            </div>
+            
+          </div>
+            <ul id="income-list">
+            </ul>
+        </div>
+    </section> 
+  
+    <section id="expense-section">
+        <div id="expense-title"><h2>Expenses</h2></div>
+        <div id="expense-field" class="container">
+          <div class="input-group-mb-3">
+            <div class="input-group-prepend">
+              <button id="expense-btn" class="btn btn-outline-secondary">Expenses</button>
+              <input id="expense-value" type="number" class="form-control" placeholder="Enter Expenses">
+            </div>
+          </div>
+            <ul id="expense-list">
+            </ul>
+        </div>
+    </section>
+    <script src="finance.js">
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const incomeBtn = document.getElementById('income-btn');
+        const incomeInput = document.getElementById('income-value');
+        const incomeList = document.getElementById('income-list');
+    
+        incomeBtn.addEventListener('click', () => {
+            const incomeValue = incomeInput.value;
+            if (income !== '') {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.textContent = incomeValue;
+                incomeList.appendChild(listItem);
+                incomeInput.value = '';
+    
+            }
+        });
+    
+    });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  </body>
+</html>
