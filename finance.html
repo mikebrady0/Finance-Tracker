@@ -26,10 +26,12 @@
               <button id="income-btn" class="btn btn-outline-secondary">Income</button>
               <input id="income-value" type="number" class="form-control" placeholder="Enter Income">
             </div>
-            
-          </div>
             <ul id="income-list">
             </ul>
+          </div>
+            <div id="income-total-container" class="income-total-container">
+              <span id="income-total">Example text</span>
+            </div>
         </div>
     </section> 
   
@@ -41,32 +43,15 @@
               <button id="expense-btn" class="btn btn-outline-secondary">Expenses</button>
               <input id="expense-value" type="number" class="form-control" placeholder="Enter Expenses">
             </div>
-          </div>
             <ul id="expense-list">
             </ul>
+          </div>
+            <div id="expense-total-container" class="expense-total-container">
+              <span id="expense-total">Example text</span>
+            </div>
         </div>
     </section>
-    <script src="finance.js">
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const incomeBtn = document.getElementById('income-btn');
-        const incomeInput = document.getElementById('income-value');
-        const incomeList = document.getElementById('income-list');
-    
-        incomeBtn.addEventListener('click', () => {
-            const incomeValue = incomeInput.value;
-            if (income !== '') {
-                const listItem = document.createElement('li');
-                listItem.className = 'list-group-item';
-                listItem.textContent = incomeValue;
-                incomeList.appendChild(listItem);
-                incomeInput.value = '';
-    
-            }
-        });
-    
-    });
-    </script>
+    <script src="finance.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   </body>

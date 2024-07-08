@@ -1,5 +1,6 @@
 * {
     border: 1px solid;
+
 }
 
 body {
@@ -32,7 +33,35 @@ section {
     flex-direction: column;
 }
 
-.container {
+ .container {
     height: 500px;
     margin-top: 10px;
 }   
+
+#income-field, #expense-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.income-total-container, .expense-total-container {
+   justify-content: flex-end;
+   margin: 5px;
+   padding: 5px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.input-group-mb-3 {
+    border: 2px solid blue;
+
+}
+
+.list-group-item {
+}
+
