@@ -1,67 +1,85 @@
-* {
-    border: 1px solid;
-
-}
-
 body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+    color: #f0f0f0; /* Light grey text */
     margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-#finance-title {
-    position:absolute;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    margin-bottom: 200px;
-
-}
-
-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px;
     padding: 20px;
 }
 
-#income-section, #expense-section {
-    margin-top: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+h2 {
+    color: #8bc34a; /* Light green for headers */
 }
 
- .container {
-    height: 500px;
-    margin-top: 10px;
-}   
-
-#income-field, #expense-field {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #8bc34a; /* Light green border */
+    border-radius: 4px;
+    background-color: #444444; /* Dark grey background */
+    color: #ffffff; /* White text */
+    margin-bottom: 10px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
 }
 
-.income-total-container, .expense-total-container {
-   justify-content: flex-end;
-   margin: 5px;
-   padding: 5px;
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8bc34a; /* Light green background */
+    color: #1e1e1e; /* Dark text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.input-group-mb-3 {
-    border: 2px solid blue;
-
+button:hover {
+    background-color: #9ccc65; /* Slightly lighter green for hover effect */
 }
 
 .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #555555; /* Dark grey border */
+    background-color: #444444; /* Dark grey background */
+    color: #ffffff; /* White text */
+    margin-bottom: 5px;
+    border-radius: 4px;
 }
 
+.total-finance {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #8bc34a; /* Light green text for totals */
+}
+
+button.btn-secondary {
+    background-color: #555555; /* Dark grey background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-secondary:hover {
+    background-color: #666666; /* Slightly lighter grey for hover effect */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
